@@ -1,11 +1,13 @@
 #!/usr/bin/python3
+import sys
+
+def add_arg(*args):
+    total = sum(map(int, args))
+    return total
+
 if __name__ == "__main__":
-    import sys
 
-    total = 0
-    count = len(sys.argv) -1
-
-    for i in range(count):
-        total += int(sys.argv[i + 1])
-        print("{:d}".format(total))
+    args = sys.argv[1:]
+    result = add_arg(*args)
+    print(result)
 
