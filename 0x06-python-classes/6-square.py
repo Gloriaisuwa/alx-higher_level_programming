@@ -59,7 +59,7 @@ class Square:
     @property
     def position(self):
         """
-        Retrieves position
+        Getter method that retrieves position
 
         Returns:
             tuple: tuple of 2 positive integers
@@ -69,7 +69,7 @@ class Square:
     @position.setter
     def position(self, value):
         """
-        Sets the position of the square
+        Setter method that update the position of the square
 
         Args:
             value (tuple): The position of the square
@@ -108,5 +108,4 @@ class Square:
             for _ in range(self.__position[1]):
                 print()
             for _ in range(self.__size):
-                print(" " * self.__position[0], end="")
-                print("#" * self.__size)
+                print(" " * self.__position[0] + "#" * self.__size)
